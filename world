@@ -25,6 +25,7 @@ media-gfx/w3mimgfb
 media-libs/alsa-lib
 media-libs/imlib2
 media-sound/alsa-utils
+media-video/mpv
 net-analyzer/netcat
 net-misc/dhcpcd
 net-misc/netifrc
