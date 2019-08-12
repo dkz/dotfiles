@@ -1,0 +1,17 @@
+Ported fix from libtsm-4
+Response to 'CSI c' contains random bytes
+
+diff --git a/src/tsm_vte.c b/src/tsm_vte.c
+index 70d34d9..9a56e10 100644
+--- a/src/tsm_vte.c
++++ b/src/tsm_vte.c
+@@ -642,7 +642,8 @@ void tsm_vte_hard_reset(struct tsm_vte *vte)
+ 
+ static void send_primary_da(struct tsm_vte *vte)
+ {
+-	vte_write(vte, "\e[?60;1;6;9;15c", 17);
++  const static char str[] = "\e[?60;1;6;9;15c";
++  vte_write(vte, str, sizeof(str) - 1);
+ }
+ 
+ /* execute control character (C0 or C1) */

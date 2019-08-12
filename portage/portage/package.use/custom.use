@@ -1,0 +1,31 @@
+#
+sys-kernel/linux-firmware redistributable -uknown-license
+
+#
+dev-vcs/git highlight
+
+# enable python scripting in vim and terminal plugin
+app-editors/vim python terminal
+
+# use cairo open gl
+x11-libs/cairo opengl
+app-text/poppler cairo
+
+# i3 documenation and config examples
+x11-wm/i3 doc
+
+# gentoo theme for slim
+x11-misc/slim branding
+
+# apvlv render pdf and djvu too
+app-text/apvlv djvu
+
+# always use preconfigured .h for st
+x11-terms/st savedconfig
+
+# required for both feh and w3m
+media-libs/imlib2 png gif jpeg
+
+# mpv shared lib
+# enable hardware acceleration
+media-video/mpv libmpv

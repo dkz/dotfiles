@@ -1,0 +1,16 @@
+# required by sys-apps/kmscon-8::gentoo
+# required by sys-apps/kmscon (argument)
+=dev-libs/libtsm-3 ~x86
+# required by sys-apps/kmscon (argument)
+=sys-apps/kmscon-8 ~x86
+# required by dev-scheme/chez-scheme (argument)
+=dev-scheme/chez-scheme-9.5.2 ~x86
+# required by www-client/chromium-76.0.3809.87::gentoo
+# required by www-client/chromium (argument)
+=dev-util/gn-0.1544 ~x86
+# required by www-client/chromium (argument)
+=www-client/chromium-76.0.3809.87 ~x86
+# required by x11-misc/xkb-switch (argument)
+=x11-misc/xkb-switch-1.6.0 ~x86
+# required by i3lock-color (argument)
+=x11-misc/i3lock-color-2.12 ~x86
