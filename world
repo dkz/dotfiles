@@ -43,6 +43,7 @@ sys-process/cronie
 sys-process/iotop
 sys-process/lsof
 www-client/w3m
+x11-apps/mesa-progs
 x11-apps/setxkbmap
 x11-base/xorg-drivers
 x11-base/xorg-server
@@ -51,6 +52,7 @@ x11-misc/dmenu
 x11-misc/i3blocks
 x11-misc/i3lock-color
 x11-misc/slim
+x11-misc/vdpauinfo
 x11-misc/xkb-switch
 x11-terms/sakura
 x11-terms/st

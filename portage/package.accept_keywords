@@ -14,3 +14,5 @@
 =x11-misc/xkb-switch-1.6.0 ~x86
 # required by i3lock-color (argument)
 =x11-misc/i3lock-color-2.12 ~x86
+# required by libvdpau-va-gl (argument)
+=x11-libs/libvdpau-va-gl-0.3.4 ~x86

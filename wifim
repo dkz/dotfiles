@@ -1,0 +1,90 @@
+#!/bin/bash
+
+# Arguments
+wifim_command="$1"
+
+# Configuration
+wifim_iface=""
+wifim_networks="$HOME/.config/wifim/networks"
+source $HOME/.config/wifim/config
+if [ -z "$wifim_iface" ]; then
+  echo "network interface is not specified"
+  exit 1
+fi
+
+# Functions
+wc () {
+  wpa_cli -i ${wifim_iface} $@
+}
+
+wc_net0ensure () {
+  # Prepare network 0
+  if [ $(wc get_network 0 ssid) = "FAIL" ]; then
+    if [ $(wc add_network) = "FAIL" ]; then
+      echo "wpa_cli fail: add_network"
+      exit 1
+    fi
+  fi
+}
+
+wc_net0disconnect () {
+  if [ ! $(wc get_network 0 ssid) = "FAIL" ]; then
+    if [ $(wc disable_network 0) = "FAIL" ]; then
+      echo "wpa_cli fail: disable_network 0"
+      exit 1
+    fi
+  fi
+}
+
+wc_net0conf () {
+  local net=$1
+  wifi_ssid=""
+  wifi_psk=""
+  source ${wifim_networks}/${net}
+  if [ -z ${wifi_ssid} ]; then
+    echo "network is not configured"
+    exit 1
+  fi
+  if [ $(wc set_network 0 ssid \"${wifi_ssid}\") = "FAIL" ]; then
+    echo "wpa_cli fail: set_network 0 ssid"
+    exit 1
+  fi
+  if [ $(wc set_network 0 psk \"${wifi_psk}\") = "FAIL" ]; then
+    echo "wpa_cli fail: set_network 0 psk"
+    exit 1
+  fi
+}
+
+wc_net0connect () {
+  local net="$1"
+  wc_net0ensure
+  wc_net0conf $net
+  if [ $(wc enable_network 0) = "FAIL" ]; then
+    echo "wpa_cli fail: enable_network 0"
+    exit 1
+  fi
+}
+
+usage () {
+  local self=$(basename $1)
+  echo "Usage: $self [network name]"
+  echo "       $self disconnect"
+  echo "       $self status"
+}
+
+# Main
+if [ -z ${wifim_command} ]; then
+  usage $0
+  exit 0
+fi
+case ${wifim_command} in
+  "disconnect")
+    wc_net0disconnect
+    ;;
+  "status")
+    wc status
+    ;;
+  *)
+    wc_net0connect ${wifim_command}
+    ;;
+esac

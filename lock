@@ -1,0 +1,30 @@
+#! /bin/sh -
+
+color_black="#282a2e"
+color_gray="#2f343f"
+color_light_gray="#707880"
+color_red="#e53935"
+color_blue="#5f819d"
+text_color="#c5c8c6"
+
+i3lock \
+  --insidevercolor="${color_gray}dd" \
+  --ringvercolor="${color_blue}dd" \
+  --insidewrongcolor="${color_red}22" \
+  --insidecolor="${color_gray}aa" \
+  --ringcolor="${color_light_gray}aa" \
+  --linecolor="${color_black}ff" \
+  --separatorcolor="${color_black}ff" \
+  --timecolor="${text_color}aa" \
+  --datecolor="${text_color}aa" \
+  --layoutcolor="${text_color}aa" \
+  --keyhlcolor="${text_color}ff" \
+  --bshlcolor="${text_color}ff" \
+  --screen 1 \
+  --blur 5 \
+  --clock \
+  --indicator \
+  --timestr="%H:%M:%S" \
+  --datestr="%d %b" \
+  --wrongtext="" \
+  --veriftext=""

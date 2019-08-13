@@ -1,0 +1,7 @@
+# created by eselect-repo
+
+
+[x11]
+location = /var/db/repos/x11
+sync-type = git
+sync-uri = https://github.com/gentoo-mirror/x11.git
