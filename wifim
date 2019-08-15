@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Arguments
 wifim_command="$1"
@@ -6,7 +6,7 @@ wifim_command="$1"
 # Configuration
 wifim_iface=""
 wifim_networks="$HOME/.config/wifim/networks"
-source $HOME/.config/wifim/config
+. "$HOME/.config/wifim/config"
 if [ -z "$wifim_iface" ]; then
   echo "network interface is not specified"
   exit 1

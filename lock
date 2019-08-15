@@ -1,4 +1,4 @@
-#! /bin/sh -
+#!/bin/sh
 
 color_black="#282a2e"
 color_gray="#2f343f"

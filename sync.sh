@@ -1,4 +1,4 @@
-#! /bin/sh -
+#!/bin/sh
 # Synchronize system configuration files with repository
 
 rsync -v /var/lib/portage/world world
