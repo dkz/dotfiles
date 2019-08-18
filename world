@@ -33,10 +33,13 @@ net-analyzer/netcat
 net-misc/dhcpcd
 net-misc/netifrc
 net-misc/ntp
+net-misc/youtube-dl
+net-proxy/tsocks
 net-wireless/iw
 net-wireless/wpa_supplicant
 sys-apps/mlocate
 sys-apps/pciutils
+sys-apps/uam
 sys-boot/grub:2
 sys-kernel/genkernel
 sys-kernel/gentoo-sources
@@ -46,6 +49,7 @@ sys-process/cronie
 sys-process/htop
 sys-process/iotop
 sys-process/lsof
+www-client/surf
 www-client/w3m
 x11-apps/mesa-progs
 x11-apps/setxkbmap

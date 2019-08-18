@@ -40,7 +40,7 @@ wc_net0conf () {
   local net=$1
   wifi_ssid=""
   wifi_psk=""
-  source ${wifim_networks}/${net}
+  . "${wifim_networks}/${net}"
   if [ -z ${wifi_ssid} ]; then
     echo "network is not configured"
     exit 1

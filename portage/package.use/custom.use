@@ -26,6 +26,9 @@ x11-terms/st savedconfig
 # required for both feh and w3m
 media-libs/imlib2 png gif jpeg
 
+# enable networking and codecs for ffmpeg
+media-video/ffmpeg network openssl x264 x265
+
 # mpv shared lib
 # enable hardware acceleration
 media-video/mpv libmpv
