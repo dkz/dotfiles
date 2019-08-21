@@ -1,3 +1,4 @@
+app-admin/eclean-kernel
 app-admin/sudo
 app-admin/sysklogd
 app-editors/vim
@@ -42,8 +43,8 @@ sys-apps/pciutils
 sys-apps/uam
 sys-boot/grub:2
 sys-kernel/genkernel
-sys-kernel/gentoo-sources
-sys-kernel/linux-firmware
+sys-kernel/gentoo-sources:4.19.66
+sys-kernel/linux-firmware:20190815
 sys-power/hibernate-script
 sys-process/cronie
 sys-process/htop
