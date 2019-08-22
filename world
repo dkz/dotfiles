@@ -6,6 +6,7 @@ app-eselect/eselect-repository
 app-laptop/laptop-mode-tools
 app-misc/figlet
 app-misc/neofetch
+app-misc/nnn
 app-misc/ranger
 app-misc/tmux
 app-portage/eix
