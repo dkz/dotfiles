@@ -13,6 +13,8 @@ app-portage/eix
 app-portage/gentoolkit
 app-portage/portage-utils
 app-shells/dash
+app-shells/gentoo-zsh-completions
+app-shells/zsh
 app-text/apvlv
 app-text/poppler
 dev-python/pygobject
@@ -32,6 +34,7 @@ media-libs/imlib2
 media-sound/alsa-utils
 media-video/mpv
 net-analyzer/netcat
+net-libs/webkit-gtk-2.24.2
 net-misc/dhcpcd
 net-misc/netifrc
 net-misc/ntp
@@ -45,7 +48,6 @@ sys-apps/uam
 sys-boot/grub:2
 sys-kernel/genkernel
 sys-kernel/gentoo-sources:4.19.66
-sys-kernel/linux-firmware:20190815
 sys-power/hibernate-script
 sys-process/cronie
 sys-process/htop
