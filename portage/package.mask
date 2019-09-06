@@ -1,1 +1,1 @@
-=net-libs/webkit-gtk
+net-libs/webkit-gtk
